@@ -1,0 +1,98 @@
+Fecha: 25/03/2026
+
+- Relacionar datos e información.
+- Evitar que la información quede guardada por la mitad.
+- Elegir la BDD correcta para ese SI.
+- Ejemplo: Sistema Bancario -> BDD RELACIONAL (relacionar con SQL es más fácil)
+
+PRESENTACIÓN:
+
+PARA ELEGIR LA BDD PARA EL SISTEMA:
+- Almacenamiento estructurado y seguro.
+- Fácil acceso y consulta (en tiempo real).
+- Soporte a la toma de decisiones.
+- Automatización de procesos.
+- Cumplimiento normativo y seguridad.
+
+VENTAJAS DEL USO Y APLICACIÓN DE BDD:
+- Reducción de redundancia y mejora la integridad de datos.
+- Escalabilidad.
+- Mayor seguridad.
+- Mejor rendimeinto.
+- Interoperabilidad.
+
+Nota: ¡El indexado de la BDD permite que encuentre el registro mucho más rápido que en el .txt!
+
+SGBD (Sistema de Gestión de Bases de Datos).
+
+Recuperar la información de manera rápida y confiable.
+
+GESTIÓN DE DATOS:
+- Definición de estructuras.
+- Proveer mecanismos para la manipulación de la información.
+- Proporcionar fiabilidad.
+- Evitar posibles resultados anómalos.
+
+ESTRUCTURA GENERAL DE UN GESTOR DE BDD:
+- Procesador de consultas.
+- Gestor de la base de datos.
+- Gestor de archivos.
+- DML (Data Management Languaje).
+- DDL (Data Design Languaje).
+- Gestor de diccionario de datos.
+- Control de autorización.
+- Procesador de comandos.
+- Control de integridad.
+- Optimizador de consultas.
+- Gestor de transacciones.
+- Planificador (Scheduler).
+- Gestor de recuperación.
+- Gestor de buffers.
+
+FUNCIONES QUE DEBE INCLUIR UN SGBD:
+- Definición de datos.
+- Manipulación de datos.
+- Seguridad e integridad de datos.
+- Recuperación y concurrencia de datos.
+
+CONCURRENCIA DE DATOS: Hay un registro, dos usuarios consultan por él. Lo obtiene el que llegó primero.
+
+- Está bien que la base de datos sea concurrente pero el que consulta, consulta rápido y libera para que consulte otro.
+- No se puede modificar en forma simultánea. Primero modifica uno y después el otro.
+
+¡También es concurrencia que muchos usuarios estén usando al mismo tiempo la BDD!
+
+TIPOS DE USUARIOS DE UNA BDD:
+- Usuario inexperto.
+- Developer.
+- Usuario Sofisticado.
+- Data Base Administrator.
+
+APLICACIONES DE LOS SISTEMAS DE BDD:
+- Banca
+- Educación
+- Telecomunicaciones
+- Finanzas
+- Ventas
+- Producción
+- RR. HH.
+- Transacciones
+- Transporte
+
+SISTEMAS DE ARCHIVOS VS. SISTEMAS DE BDD:
+- Redundancia e inconsistencia de datos.
+- Dificultad de acceso a los datos.
+- Aislamiento de los datos.
+- Problemas de integridad.
+- Problemas de atomicidad.
+- Anomalías en el acceso concurrente.
+- Problemas de seguridad.
+
+VISIÓN DE LOS DATOS:
+- Abstracción de los datos (ocultar complejidad al usuario final):
+	- Nivel físico (cómo se almacenan los datos a nivel físico).
+	- Nivel lógico (qué datos se almacenan y sus relaciones).
+	- Nivel de vistas (solo muestra la parte de la BDD que el usuario final necesita).
+
+
+ 
