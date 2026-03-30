@@ -1,0 +1,7 @@
+Data/*.mdf
+Data/*.ndf
+Log/*.ldf
+Backup/*.bak
+
+SQL_Server/
+SQL_Server_Management_Studio/
