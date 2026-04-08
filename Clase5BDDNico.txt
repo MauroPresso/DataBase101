@@ -1,0 +1,72 @@
+8/4/2026
+
+Componentes de una Base De Datos:
+- Tabla:
+	- Objeto principal
+	- Campos y registros
+- Atributo:
+	- Campo
+	- Tipos
+- Dominio:
+	- Describe el conjunto de posibles valores del atributo.
+	- Enteros, cadenas, fecha.
+- Claves:
+	- Primaria
+	- Foránea
+	- Índice
+
+- La clave primaria es un índice unívoco a un registro (facilita el acceso a este).
+
+Restricciones:
+	- Hay 6 restricciones principales:
+		- SQL NOT NULL -> UNIQUE -> PRIMARY KEY -> FOREIGN KEY -> CHECK -> DEFAULT
+
+EJERCICIO LIBRERÍA:
+
+Tablas principales de la base de datos:
+	- Tabla Libros
+	- Tabla Clientes
+	- Tabla Ventas
+Campos de cada tabla:
+	- Tabla Libros:
+		- ID (Integer) -> PRIMARY KEY -> NOT NULL & UNIQUE
+		- ISBN (String) -> No conviene ordenar por strings porque es muy costoso para el motor. Conviene hacer un ID integer. -> NOT NULL & UNIQUE
+		- Título (String) -> NOT NULL
+		- Precio (Float) -> NOT NULL
+	- Tabla Clientes:
+		- DNI (Integer) -> PRIMARY KEY -> NOT NULL & UNIQUE
+		- Nombre (String) -> NOT NULL
+		- Teléfono (Integer) -> NOT NULL & UNIQUE
+	- Tabla Ventas:
+		- Nro de transacción (Integer) -> PRIMARY KEY -> NOT NULL & UNIQUE
+		- ID Cliente -> FOREIGN KEY (con este obtengo el nombre del cliente).				_
+												 		|
+												  		_ PARA NO HACER REDUNDANCIA DE LOS DATOS.
+  												 		|
+ 		- ID Libros -> FOREIGN KEY (con este obtengo el título y el precio). 				_
+
+
+EJERCICIO PLATAFORMA ESTUDIANTIL:
+
+Tablas principales de la base de datos:
+	- Tabla Estudiantes
+	- Tabla Cursos
+	- Tabla Inscripciones
+Campos de cada tabla:
+	- Tabla Estudiantes:
+		- DNI (Integer) -> PRIMARY KEY -> NOT NULL & UNIQUE
+		- Nombre (String) -> NOT NULL
+		- Email (String) -> NOT NULL & UNIQUE
+	- Tabla Cursos:
+		- ID (Integer) -> PRIMARY KEY -> NOT NULL & UNIQUE
+		- Materia (String) -> NOT NULL & UNIQUE
+		- Duracion (Float) -> NOT NULL
+	- Tabla Inscripciones:
+		- Nro de inscripción (Integer) -> PRIMARY KEY -> NOT NULL & UNIQUE (PRIMARY KEY YA ES NOT NULL & UNIQUE)
+		- ID Estudiantes -> FOREIGN KEY (con este obtengo el nombre del estudiante).
+		- ID Cursos -> FOREIGN KEY (con este obtengo la materia y la duración).
+
+¡FIN UNIDAD 2!
+
+INICIO UNIDAD 3:
+
