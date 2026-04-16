@@ -1,0 +1,96 @@
+15/04/2026
+
+Diferencia de modelado y normalización:
+
+Modelado:
+- Identifica que información hay.
+- Se enfoca en la realidad del problema.
+- Responde: ¿Qué cosas existen?
+- Es el primer paso.
+
+Normalización:
+- Organiza cómo se guarda.
+- Se enfoca en mejorar los datos.
+- Responde: ¿Está bien organizada la información?
+- Es el paso de mejora.
+
+PRO-TIP: "Primero entiendo qué datos tengo (modelado), después los ordenos bien (normalización)".
+
+PRÁCTICA EN SALAS:
+
+1) Tienda:
+	| Cliente | Prodcuto °| Precio °| Vendedor |
+
+2) Escuela:
+	| Alumno | Materia °| Profesor °| Aula |
+
+3) Pizzería:
+	| Cliente | Pedido °| Precio °| Repartidor |
+
+PRO-TIP: "Si un dato aparece muchas veces, algo se puede mejorar".
+
+Primero necesitamos pensar, organizar y diseñar cómo va a ser esta base de datos.
+
+Niveles de modelado de datos:
+
+- Modelado conceptual:
+	- Describe la visión general del negocio y sus entidades sin detalles técnicos.
+	- Elaborado por arquitectos y partes interesadas para identificar elementos clave.
+- Modelado lógico:
+	- Detalles, atributos, claves y relaciones con precisión, definiendo reglas del negocio.
+	- Es elaborado por ingenieros y analistas para guiar el diseño técnico.
+- Modelado físico:
+	- Implementa el modelo lógico usando tablas, índices y claves en sistemas específicos como SQL Server.
+	- Administradores de bases de datos y desarrolladores lo manejan para ejecutar la base real.
+
+Ejercicio 1:
+
+Un club deportivo desea registrar la información de sus socios y las actividades que ofrece.
+Cada socio puede inscribirse en distintas actividades como fútbol, natación o tenis.
+Cada actividad tiene un profesor a cargo.
+Además el club quiere registrar las inscripciones que realizan los socios en cada actividad
+
+Actividades:
+- Identifica qué elementos importantes aparecen en la situación (cosas que se quieren registrar).
+- Escribe una lista de esas "cosas" con nombre claro.
+- Indica brevemente cómo se relacionan entre sí (en palabras, no hace falta gráfico)
+
+RTAS Ejercicio 1 (Modelado conceptual):
+- En esta situación se quiere registrar:
+	- Información de los socios.
+	- Actividades que el club ofrece.
+	- Profesor a cargo de cada actividad.
+	- Inscripciones de los socios a las actividades.
+- Relaciones entre las cosas que se quieren registrar:
+	- La actividad está dada por UN profesor.
+	- Un socio se puede inscribir a más de una actividad.
+	- En una actividad se pueden inscribir varios socios.
+
+RTA Ejercicio 1 (Modelado lógico):
+- Entidades (Lo que vamos a usar para armar las tablas): Socios, Actividades, Profesores, Inscripción.
+- Atributos (Los campos de cada tabla):
+	- Tabla Actividades:
+		- Código de Actividad (INTEGER) -> PRIMARY KEY
+		- DNI del Profesor (INTEGER) -> FOREIGN KEY
+		- Horario de inicio (TIME)
+		- Horario de fin (TIME)
+		- Ubicación (VARCHAR)
+	- Tabla Profesores:
+		- DNI del Profesor (INTEGER) -> PRIMARY KEY
+		- Nombre completo (VARCHAR)
+		- Apellido (VARCHAR)
+		- Fecha de nacimiento (DATE)
+		- Domicilio (VARCHAR)
+	- Tabla Socios:
+		- DNI del Socio (INTEGER) -> PRIMARY KEY
+		- Nombre completo (VARCHAR)
+		- Apellido (VARCHAR)
+		- Fecha de nacimiento (DATE)
+		- Fecha de asociación (DATE)
+	- Tabla Inscripiones: 
+		- Código de Inscripción (INTEGER) -> PRIMARY KEY
+		- DNI del Socio (INTEGER) -> FOREIGN KEY
+		- Código de Actividad (INTEGER) -> FOREIGN KEY
+		- Fecha de Inscripción (DATE)  
+
+PRO-TIP: Si vas a poner al DNI como PRIMARY KEY asegurarse de que sea un dato de tipo INTEGER. Si lo vas a poner como VARCHAR, ahí hay que hacer un ID que sea de tipo INTEGER.
