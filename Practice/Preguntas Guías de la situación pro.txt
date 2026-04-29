@@ -1,0 +1,11 @@
+Preguntas Guías de la situación problemática a resolver
+1.	¿Qué datos se repiten innecesariamente? 
+2.	¿Qué campos contienen más de un valor? 
+3.	¿Qué datos dependen solo del estudiante? 
+4.	¿Qué datos dependen solo del curso? 
+5.	¿Qué datos dependen del docente? 
+6.	¿Qué pasaría si un docente cambia su correo? 
+7.	¿Qué pasaría si queremos agregar otro material a un curso? 
+8.	¿La nota pertenece al estudiante o a la inscripción? 
+9.	¿El área debe estar escrita como texto en cada curso o conviene separarla? 
+10.	¿Qué ventajas tiene separar la información en varias tablas?
