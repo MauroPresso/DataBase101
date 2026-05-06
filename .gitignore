@@ -1,7 +1,7 @@
-Data/*.mdf
-Data/*.ndf
-Log/*.ldf
-Backup/*.bak
+*.mdf
+*.ndf
+*.ldf
+*.bak
 
 SQL_Server/
 SQL_Server_Management_Studio/
