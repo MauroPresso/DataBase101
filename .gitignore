@@ -1,0 +1,11 @@
+*.mdf
+*.ndf
+*.ldf
+*.bak
+*.docx
+
+Practice/Normalización de Base de Datos 2026 V1.docx
+Practice/Practica Pre-Parcial U3.docx
+
+SQL_Server/
+SQL_Server_Management_Studio/

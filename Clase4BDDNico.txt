@@ -1,0 +1,51 @@
+01/04/2026
+
+REPASO:
+
+- Niveles de abstracción de datos:
+	- Nivel físico
+	- Nivel lógico
+	- Nivel de vistas
+
+- Para crear la base de datos conviene tener DNI como Unique Index.
+- Para crear la base de datos conviene tener ID como Index.
+
+Clave primaria:
+- Es única y no se tiene que repetir.
+
+Clave foránea:
+- 
+
+Para las claves es siempre el mismo tipo de dato en las tablas.
+
+Situación 1:
+- Un gimnasio anotaba todo el excel. 
+
+Clientes: 
+ID (PK) - DNI - Apellido - Nombre - Celular - Calle - Altura
+
+Profesores:
+ID (PK) - DNI (UX) - Apellido - Nombre - Celular - Calle - Altura - CUIL (UX) - Legajo (UX)
+
+Actividades: 
+ID (PK) - ID Profesor (FK) - HoarioInicio - HorarioFin - Dia
+
+Clases:
+ID_Clase (FK) - ID_Actividad (FK) - ID_Cliente (FK) - Fecha - HoraIngreso - HoraSalida
+
+Situación 2:
+- Una clinica médica necesita organizar su agenda. 
+
+Pacientes: 
+ID (PK) - DNI - Apellido - Nombre - Celular - Calle - Altura
+
+Médicos:
+ID (PK) - DNI (UX) - Apellido - Nombre - Celular - Calle - Altura - CUIL (UX) - Legajo (UX) - Especialidad
+
+Consulta: 
+ID (PK) - ID Profesor (FK) - HoarioInicio - HorarioFin - Dia
+
+Turnos:
+ID_Turnos (FK) - ID_Paciente (FK) - ID_Medico (FK) - Fecha - HoraIngreso - HoraSalida
+
+Sistema escalable: ¿A qué costo crece?
